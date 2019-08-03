@@ -1,0 +1,34 @@
+<assembly>
+    <id>dist</id>
+    <formats>
+        <format>dir</format>
+        <format>zip</format>
+    </formats>
+
+    <fileSets>
+        <fileSet>
+            <directory>src/main/resources/</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>*.sh</include>
+                <include>*.bat</include>
+            </includes>
+            <fileMode>0755</fileMode>
+        </fileSet>
+        <fileSet>
+            <directory>config/</directory>
+            <outputDirectory>/config</outputDirectory>
+            <includes>
+                <include>*.properties</include>
+                <include>fciv.exe</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>target</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>artifinder-1.0.1.jar</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>
